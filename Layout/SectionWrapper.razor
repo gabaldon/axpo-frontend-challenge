@@ -1,0 +1,9 @@
+<section class="flex justify-center w-full">
+    <div class="grid gap-8 w-full max-w-[1112px] p-6">
+        @ChildContent
+    </div>
+</section>
+
+@code {
+    [Parameter] public RenderFragment ChildContent { get; set; }
+}

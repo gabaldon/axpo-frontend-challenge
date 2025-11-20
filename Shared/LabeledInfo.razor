@@ -1,0 +1,11 @@
+<div class="h-max">
+    <label class="text-sm font-bold leading-6">@Label</label>
+    <p class="text-sm m-0 leading-6 flex items-center gap-2">
+        @Value
+    </p>
+</div>
+
+@code {
+    [Parameter] public string Label { get; set; }
+    [Parameter] public RenderFragment Value { get; set; }
+}
