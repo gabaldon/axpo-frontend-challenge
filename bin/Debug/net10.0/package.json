@@ -6,7 +6,7 @@
 		"tailwindcss": "^4.1.17"
 	},
 	"scripts": {
-		"build:css": "npx @tailwindcss/cli ./wwwroot/css/input.css -o ./wwwroot/css/app.css --minify",
+		"build:css": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/app.css --minify",
 		"watch:css": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/app.css --watch",
 		"build": "npm run build:css && dotnet publish -c Release -o publish",
 		"dev": "concurrently \"npm run watch:css\" \"dotnet watch run\""

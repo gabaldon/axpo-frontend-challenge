@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "axpo_contract_onboarding",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-5z8kQ+TGRcD039UlCIWSWY8EtvBRfs3JogocTEHHptM=",
+    "hash": "sha256-cqJJ3CxSZKTB8rzOIUkIBYTf8eY5ItVvyQ3P2OCJ7Wg=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.xanz2e7ksm.js"
@@ -1039,15 +1039,15 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "axpo_contract_onboarding.wasm",
-        "name": "axpo_contract_onboarding.jslepaqatq.wasm",
-        "integrity": "sha256-06bwW1mXjUVS0/nKDLAA/2O4Nfgn9xoBD6RNY3JMU5A="
+        "name": "axpo_contract_onboarding.mxjfkw2zjo.wasm",
+        "integrity": "sha256-qgYkzkUwgw9SQRjMJBI0ApDlupEptgqQp8PlDSXtX7U="
       }
     ],
     "pdb": [
       {
         "virtualPath": "axpo_contract_onboarding.pdb",
-        "name": "axpo_contract_onboarding.6c34h7tu9x.pdb",
-        "integrity": "sha256-Gplxq7Y8bjr3ymMtnFuINjfYHptv+zj39MZdKVN8vNg="
+        "name": "axpo_contract_onboarding.xq42dlzvtv.pdb",
+        "integrity": "sha256-d+qf5DhUhJqegduK35AtZ2V/sC03v/ZzbWQ38z09Rq0="
       }
     ],
     "libraryInitializers": [
