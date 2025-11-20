@@ -1,5 +1,6 @@
 ﻿@page "/"
 @layout MainLayout
+@inject HttpClient Http
 
 <PageTitle>Axpo Contract Onboarding</PageTitle>
 <div class="bg-surface">
@@ -10,7 +11,29 @@
 <SectionWrapper>
   <h2 class="text-text-primary text-xl font-bold mb-0">Contract Summary</h2>
   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-2 gap-4">
-    <ContractInfo />
-    <ContractInfo />
+    @foreach (var contract in Contracts)
+    {
+      <ContractInfo
+          Title="@contract.Title"
+          DefaultExpanded="@contract.DefaultExpanded"
+          ContractType="@contract.ContractType"
+          CountryName="@contract.CountryName"
+          Period="@contract.Period"
+          Commodity="@contract.Commodity"
+          SignatureDate="@contract.SignatureDate">
+          <CountryIcon>
+              <FrIcon />
+          </CountryIcon>
+      </ContractInfo>
+    }
   </div>
 </SectionWrapper>
+
+@code {
+    private List<ContractSummary> Contracts = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Contracts = await Http.GetFromJsonAsync<List<ContractSummary>>("sample-data/contracts.json") ?? new List<ContractSummary>();
+    }
+}

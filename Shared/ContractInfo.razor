@@ -1,28 +1,59 @@
-<div>
-  <div class="flex justify-between items-center gap-2 w-full border-b border-surface pb-2">
-    <p class="h-max m-0 font-lucida font-bold text-base">Overview</p>
-    <ChevronUpIcon />
-  </div>
-
-  <div class="grid grid-cols-2 gap-6 py-2 px-3 bg-surface mt-3">
-    <div class="grid gap-6 items-start">
-      <LabeledInfo Label="Contract Type">
-        <Value>Existing Client - New Business</Value>
-      </LabeledInfo>
-      <LabeledInfo Label="Country">
-        <Value><FrIcon /> France</Value>
-      </LabeledInfo>
-      <LabeledInfo Label="Period">
-        <Value>01/01/2023 - 31/12/2027</Value>
-      </LabeledInfo>
+<div class="w-full">
+    <button @onclick="Toggle"
+            class="flex justify-between items-center w-full border-b border-surface pb-2 cursor-pointer">
+        <p class="font-lucida font-bold text-base m-0">@Title</p>
+        <ChevronUpIcon CssClass="@ChevronClass" />
+    </button>
+    <div class="@SlideClass overflow-hidden transition-[max-height] duration-300 ease-in-out">
+        <div class="grid grid-cols-2 gap-6 py-2 px-3 bg-surface mt-3">
+            <div class="grid gap-6 items-start">
+                <LabeledInfo Label="Contract Type"><Value>@ContractType</Value></LabeledInfo>
+                <LabeledInfo Label="Country">
+                    <Value>
+                        @if (CountryIcon != null)
+                        {
+                            <span class="flex gap-1 items-center">
+                                @CountryIcon
+                                @CountryName
+                            </span>
+                        }
+                        else
+                        {
+                            @CountryName
+                        }
+                    </Value>
+                </LabeledInfo>
+                <LabeledInfo Label="Period"><Value>@Period</Value></LabeledInfo>
+            </div>
+            <div class="grid gap-6 h-max">
+                <LabeledInfo Label="Commodity"><Value>@Commodity</Value></LabeledInfo>
+                <LabeledInfo Label="Signature Date"><Value>@SignatureDate</Value></LabeledInfo>
+            </div>
+        </div>
     </div>
-    <div class="grid gap-6 h-max">
-      <LabeledInfo Label="Commodity">
-        <Value>Power</Value>
-      </LabeledInfo>
-      <LabeledInfo Label="Signature Date">
-        <Value>26/04/2023</Value>
-      </LabeledInfo>
-    </div>
-  </div>
 </div>
+
+@code {
+    private bool IsExpanded;
+
+    [Parameter] public string Title { get; set; } = "Overview";
+    [Parameter] public string? ContractType { get; set; }
+    [Parameter] public string? CountryName { get; set; }
+    [Parameter] public RenderFragment? CountryIcon { get; set; }
+    [Parameter] public string? Period { get; set; }
+    [Parameter] public string? Commodity { get; set; }
+    [Parameter] public string? SignatureDate { get; set; }
+    [Parameter] public bool DefaultExpanded { get; set; } = false;
+
+    protected override void OnInitialized()
+    {
+        IsExpanded = DefaultExpanded;
+    }
+
+    private void Toggle() => IsExpanded = !IsExpanded;
+
+    private string SlideClass => IsExpanded ? "max-h-[1000px]" : "max-h-0";
+
+    private string ChevronClass =>
+        IsExpanded ? "rotate-180 transition-transform" : "transition-transform";
+}

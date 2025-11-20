@@ -1,0 +1,41 @@
+# Visual Studio / .NET
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.ide
+
+# Rider
+.idea/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / Tailwind / npm
+node_modules/
+wwwroot/css/app.css
+wwwroot/css/app.css.map
+package-lock.json
+yarn.lock
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.old
+
+# Publish / Deployment
+publish/
+dist/
