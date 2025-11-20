@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("axpo_contract_onboarding")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44294d8f0267c81be77b7a0c141102e5a3c6bb7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7af01b7aac84d5e8da8bf0322d9b34bfaa3d6406")]
 [assembly: System.Reflection.AssemblyProductAttribute("axpo_contract_onboarding")]
 [assembly: System.Reflection.AssemblyTitleAttribute("axpo_contract_onboarding")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

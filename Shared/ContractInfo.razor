@@ -1,13 +1,15 @@
 <div class="w-full">
     <button @onclick="Toggle"
-            class="flex justify-between items-center w-full border-b border-surface pb-2 cursor-pointer">
+        class="flex justify-between items-center w-full border-b border-surface pb-2 cursor-pointer">
         <p class="font-lucida font-bold text-base m-0">@Title</p>
         <ChevronUpIcon CssClass="@ChevronClass" />
     </button>
     <div class="@SlideClass overflow-hidden transition-[max-height] duration-300 ease-in-out">
         <div class="grid grid-cols-2 gap-6 py-2 px-3 bg-surface mt-3">
             <div class="grid gap-6 items-start">
-                <LabeledInfo Label="Contract Type"><Value>@ContractType</Value></LabeledInfo>
+                <LabeledInfo Label="Contract Type">
+                    <Value>@ContractType</Value>
+                </LabeledInfo>
                 <LabeledInfo Label="Country">
                     <Value>
                         @if (CountryIcon != null)
@@ -23,11 +25,17 @@
                         }
                     </Value>
                 </LabeledInfo>
-                <LabeledInfo Label="Period"><Value>@Period</Value></LabeledInfo>
+                <LabeledInfo Label="Period">
+                    <Value>@Period</Value>
+                </LabeledInfo>
             </div>
             <div class="grid gap-6 h-max">
-                <LabeledInfo Label="Commodity"><Value>@Commodity</Value></LabeledInfo>
-                <LabeledInfo Label="Signature Date"><Value>@SignatureDate</Value></LabeledInfo>
+                <LabeledInfo Label="Commodity">
+                    <Value>@Commodity</Value>
+                </LabeledInfo>
+                <LabeledInfo Label="Signature Date">
+                    <Value>@SignatureDate</Value>
+                </LabeledInfo>
             </div>
         </div>
     </div>
@@ -55,5 +63,5 @@
     private string SlideClass => IsExpanded ? "max-h-[1000px]" : "max-h-0";
 
     private string ChevronClass =>
-        IsExpanded ? "rotate-180 transition-transform" : "transition-transform";
+    IsExpanded ? "rotate-180 transition-transform" : "transition-transform";
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TOaOVMjw3R0=",
+  "dgSpecHash": "X3g1xXaUMXY=",
   "success": true,
   "projectFilePath": "/Users/gabaldon/development/technical-interviews/axpo/axpo_contract_onboarding/axpo_contract_onboarding.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "/Users/gabaldon/.nuget/packages/microsoft.aspnetcore.components.webassembly/10.0.0/microsoft.aspnetcore.components.webassembly.10.0.0.nupkg.sha512",
     "/Users/gabaldon/.nuget/packages/microsoft.aspnetcore.components.webassembly.devserver/10.0.0/microsoft.aspnetcore.components.webassembly.devserver.10.0.0.nupkg.sha512",
     "/Users/gabaldon/.nuget/packages/microsoft.aspnetcore.metadata/10.0.0/microsoft.aspnetcore.metadata.10.0.0.nupkg.sha512",
+    "/Users/gabaldon/.nuget/packages/microsoft.dotnet.hotreload.webassembly.browser/10.0.100/microsoft.dotnet.hotreload.webassembly.browser.10.0.100.nupkg.sha512",
     "/Users/gabaldon/.nuget/packages/microsoft.extensions.configuration/10.0.0/microsoft.extensions.configuration.10.0.0.nupkg.sha512",
     "/Users/gabaldon/.nuget/packages/microsoft.extensions.configuration.abstractions/10.0.0/microsoft.extensions.configuration.abstractions.10.0.0.nupkg.sha512",
     "/Users/gabaldon/.nuget/packages/microsoft.extensions.configuration.binder/10.0.0/microsoft.extensions.configuration.binder.10.0.0.nupkg.sha512",

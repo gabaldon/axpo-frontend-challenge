@@ -1,0 +1,26 @@
+root = true
+
+# General settings for all files
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# C# files
+[*.cs]
+csharp_indent_block_contents = true
+csharp_indent_braces = true
+csharp_indent_labels = one_less
+dotnet_sort_system_directives_first = true
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+# Razor files
+[*.razor]
+indent_style = space
+indent_size = 2
