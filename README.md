@@ -17,7 +17,7 @@ Blazor WebAssembly project with Tailwind CSS for styling. This project demonstra
 
 ### Prerequisites
 
-- .NET SDK
+- .NET 10 SDK
 - Node.js (for Tailwind)
 - pnpm, npm or yarn
 
